@@ -1,15 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Button from '../components/Button';
-import Card from '../components/Card';
 import Hero from '../components/Hero';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styles from './styles/Home.module.css';
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  fade: true,
+};
+
+const EventSlide = ({ text, subtext, imageSrc }) => (
+  <div className={styles.eventSlide}>
+    <img src={imageSrc} alt={text} className={styles.eventImage} />
+    <h3>{text}</h3>
+    <p>{subtext}</p>
+  </div>
+);
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [sliderLoaded, setSliderLoaded] = useState(false);
+
+  useEffect(() => {
+    setSliderLoaded(true);
+  }, []);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -21,12 +45,16 @@ export default function Home() {
             </Hero>
             
             <div className={styles.lowerContent}>
-              <Hero className="events-hero">
+              <div className={styles.eventsHero}>
                 <h2>Upcoming Events</h2>
-                <Card title="Event 1" description="Details about event 1." />
-                <Card title="Event 2" description="Details about event 2." />
-                {/* Add more event cards as needed */}
-              </Hero>
+                {sliderLoaded && (
+                  <Slider {...settings} className={styles.customSlider}>
+                    <EventSlide text="Event 1" subtext="Details about event 1." imageSrc="/images/ps_event_8_11.jpeg" />
+                    <EventSlide text="Event 2" subtext="Details about event 2." imageSrc="/images/ps_event_7_21.jpeg" />
+                    {/* Add more EventSlide components as needed */}
+                  </Slider>
+                )}
+              </div>
               <Hero className="about-hero">
                 <h2>About Us</h2>
                 <p>Information about the organization.</p>

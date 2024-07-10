@@ -18,3 +18,35 @@
     justify-content: space-between;
     width: 100%;
 }
+
+.eventsHero {
+    width: 48%; /* Adjust as needed */
+}
+
+.eventSlide {
+    padding: 20px;
+}
+
+.eventImage {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.customSlider {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.customSlider :global(.slick-slide) {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.customSlider :global(.slick-slide.slick-active) {
+    opacity: 1;
+}
+
+.about-hero {
+    width: 48%; /* Adjust as needed */
+}
