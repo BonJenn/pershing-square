@@ -1,16 +1,19 @@
 'use client';
 
 import React from 'react';
-import styles from '../app/styles/Header.module.css'; // Import the CSS module
+import styles from '../app/styles/Header.module.css';
+import Navigation from './Navigation.jsx';
 
-export default function Header() {
+export default function Header({ setCurrentPage, currentPage }) {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.logo}>
-        {/* Content inside the logo div */}
+        {/* Logo content */}
       </div>
-      
-      {/* Add navigation or other header content here */}
+      <div className={styles.navWrapper}>
+        <Navigation setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      </div>
+      <div className={styles.placeholder}></div>
     </header>
   );
 }

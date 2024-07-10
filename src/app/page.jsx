@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Hero from '../components/Hero';
-import Navigation from '../components/Navigation'; // Import the Navigation component
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -55,8 +54,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <Navigation setCurrentPage={setCurrentPage} />
+      <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <main>
         {renderPage()}
       </main>

@@ -1,15 +1,40 @@
 'use client';
 
-import React from 'react';
-import styles from '../app/styles/Navigation.module.css'; // Import the CSS module
+import React, { useState, useEffect, useRef } from 'react';
+import styles from '../app/styles/Navigation.module.css';
 
-export default function Navigation({ setCurrentPage }) {
+export default function Navigation({ setCurrentPage, currentPage }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const pillRef = useRef(null);
+
+  useEffect(() => {
+    const activeButton = document.querySelector(`.${styles.active}`);
+    if (activeButton && pillRef.current) {
+      pillRef.current.style.left = `${activeButton.offsetLeft}px`;
+      pillRef.current.style.width = `${activeButton.offsetWidth}px`;
+    }
+  }, [activeIndex]);
+
+  const handleClick = (page, index) => {
+    setCurrentPage(page);
+    setActiveIndex(index);
+  };
+
   return (
-    <nav>
+    <nav className={`${styles.navContainer} ${styles.navbar}`}>
+      <div className={styles.pillBackground}></div>
+      <div ref={pillRef} className={styles.activePill}></div>
       <ul className={styles.navList}>
-        <li><button onClick={() => setCurrentPage('home')}>Home</button></li>
-        <li><button onClick={() => setCurrentPage('events')}>Events</button></li>
-        <li><button onClick={() => setCurrentPage('venue')}>Venue</button></li>
+        {['events', 'home', 'venue'].map((page, index) => (
+          <li key={page}>
+            <button
+              onClick={() => handleClick(page, index)}
+              className={`${currentPage === page ? styles.active : ''}`}
+            >
+              {page.charAt(0).toUpperCase() + page.slice(1)}
+            </button>
+          </li>
+        ))}
       </ul>
     </nav>
   );

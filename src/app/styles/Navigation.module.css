@@ -1,7 +1,39 @@
-.navList {
+.navContainer {
+    position: relative;
+    background-color: #333;
+    border-radius: 25px;
+    padding: 5px;
+    display: inline-block;
+  }
+  
+  .pillBackground {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    z-index: 1;
+  }
+  
+  .activePill {
+    position: absolute;
+    height: calc(100% - 10px);
+    background-color: #FFA500;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  
+  .navList {
     list-style: none;
     display: flex;
-    gap: 20px; /* Adjust the gap as needed */
+    gap: 10px;
+    position: relative;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
   }
   
   .navList li {
@@ -12,5 +44,13 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 16px; /* Adjust the font size as needed */
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .navList button.active {
+    color: #333;
   }

@@ -1,6 +1,24 @@
-.logo {
-    height: 100px;
-    width: 100px;
+.header {
+    width: 100%;
     background-color: red;
-    border: 1px solid black; /* Add this line for debugging */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+.navWrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder {
+    width: 50px; /* Same width as logo */
 }
