@@ -1,82 +1,57 @@
-.Home {
+.pageWrapper {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
+  }
+  
+  .Home {
+    flex: 1;
     padding-top: 20px;
-}
-
-.homeContent {
-    width: 100%;
+  }
+  
+  .homeContent {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mainHeroWrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.lowerContent {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.eventsHero {
+    padding: 20px;
+  }
+  
+  .eventsHero {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.eventSlide {
+  }
+  
+  .eventSlide {
     padding: 10px;
-}
-
-.eventImageWrapper {
+  }
+  
+  .eventImageWrapper {
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-}
-
-.eventImage {
+  }
+  
+  .eventImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.customSlider {
+  }
+  
+  .customSlider {
     margin: 0 -10px;
-}
-
-.customSlider :global(.slick-slide) {
+  }
+  
+  .customSlider :global(.slick-slide) {
     padding: 0 10px;
-}
-
-.about-hero {
-    width: 100%;
-    max-width: 800px;
-    margin: 30px auto 0;
-}
-
-@media (max-width: 768px) {
-    .lowerContent {
-        flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    .homeContent {
+      padding: 10px;
     }
-
-    .eventsHero,
-    .about-hero {
-        width: 100%;
-    }
-}
+  }

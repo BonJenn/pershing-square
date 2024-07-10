@@ -1,33 +1,45 @@
 .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  
+  .heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
-.heroImage {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 30px;
-}
-
-.heroText {
-    font-size: 2rem;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
     color: #fff;
-}
-
-.heroSubtext {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
-.heroLink {
+  }
+  
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .heroText {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtext {
+    font-size: 1.5rem;
+  }
+  
+  .heroLink {
     text-decoration: none;
     color: inherit;
-    display: block;
-}
+  }

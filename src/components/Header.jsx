@@ -12,8 +12,8 @@ export default function Header({ setCurrentPage, currentPage }) {
         <Image 
           src="/images/pershing_square_logo.png" 
           alt="Pershing Square Logo" 
-          width={100} // Adjust this to your logo's width
-          height={110} // Adjust this to your logo's height
+          width={100}
+          height={110}
         />
       </div>
       <div className={styles.navWrapper}>
