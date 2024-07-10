@@ -1,0 +1,18 @@
+.hero {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .main-hero {
+    background: url('/path-to-video-thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: red;
+  }
+  
+  .events-hero {
+    background-color: green;
+  }
+  
+  .about-hero {
+    background-color: pink;
+  }
