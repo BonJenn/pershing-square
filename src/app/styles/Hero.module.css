@@ -1,18 +1,25 @@
 .hero {
-    padding: 20px;
-    margin: 20px 0;
+    margin: 30px;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
   }
   
-  .main-hero {
-    background: url('/path-to-video-thumbnail.jpg') no-repeat center center;
-    background-size: cover;
-    background-color: red;
+  .heroText {
+    font-size: 2rem;
+    color: #fff;
   }
   
-  .events-hero {
-    background-color: green;
+  .heroSubtext {
+    font-size: 1.2rem;
+    color: #ccc;
   }
   
-  .about-hero {
-    background-color: pink;
+  .heroLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }

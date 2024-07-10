@@ -16,6 +16,11 @@ export default function Home() {
       case 'home':
         return (
           <>
+
+            <Hero className="main-hero" text=" " subtext=" " imageSrc="/images/ps_event_7_21.jpeg" link="https://example.com">
+              {/* Additional children components */}
+            </Hero>
+
             <Hero className="main-hero">
               <h1>Forever 80's</h1>
               <p>Saturday, July 13th at 3pm</p>
