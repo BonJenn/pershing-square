@@ -1,25 +1,33 @@
 .hero {
-    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .heroImage {
     width: 100%;
+    max-width: 800px;
     height: auto;
     border-radius: 30px;
-  }
-  
-  .heroText {
+}
+
+.heroText {
     font-size: 2rem;
     color: #fff;
-  }
-  
-  .heroSubtext {
+}
+
+.heroSubtext {
     font-size: 1.2rem;
     color: #ccc;
-  }
-  
-  .heroLink {
+}
+
+.heroLink {
     text-decoration: none;
     color: inherit;
     display: block;
-  }
+}

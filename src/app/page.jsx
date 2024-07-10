@@ -1,4 +1,3 @@
-// src/app/page.jsx
 'use client';
 
 import { useState } from 'react';
@@ -7,6 +6,7 @@ import Footer from '../components/Footer';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Hero from '../components/Hero';
+import styles from './styles/Home.module.css';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -15,30 +15,24 @@ export default function Home() {
     switch (currentPage) {
       case 'home':
         return (
-          <>
-
+          <div className={styles.homeContent}>
             <Hero className="main-hero" text=" " subtext=" " imageSrc="/images/ps_event_7_21.jpeg" link="https://example.com">
               {/* Additional children components */}
             </Hero>
-
-            <Hero className="main-hero">
-              <h1>Forever 80's</h1>
-              <p>Saturday, July 13th at 3pm</p>
-              <p>Free with RSVP</p>
-              <Button />
-              {/* Add video element here */}
-            </Hero>
-            <Hero className="events-hero">
-              <h2>Upcoming Events</h2>
-              <Card title="Event 1" description="Details about event 1." />
-              <Card title="Event 2" description="Details about event 2." />
-              {/* Add more event cards as needed */}
-            </Hero>
-            <Hero className="about-hero">
-              <h2>About Us</h2>
-              <p>Information about the organization.</p>
-            </Hero>
-          </>
+            
+            <div className={styles.lowerContent}>
+              <Hero className="events-hero">
+                <h2>Upcoming Events</h2>
+                <Card title="Event 1" description="Details about event 1." />
+                <Card title="Event 2" description="Details about event 2." />
+                {/* Add more event cards as needed */}
+              </Hero>
+              <Hero className="about-hero">
+                <h2>About Us</h2>
+                <p>Information about the organization.</p>
+              </Hero>
+            </div>
+          </div>
         );
       case 'events':
         return (
@@ -60,7 +54,7 @@ export default function Home() {
   return (
     <div>
       <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
-      <main>
+      <main className={styles.Home}>
         {renderPage()}
       </main>
       <Footer />
