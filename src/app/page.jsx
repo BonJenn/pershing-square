@@ -59,30 +59,40 @@ export default function Home() {
     switch (currentPage) {
       case 'home':
         return (
-          <div className={styles.homeContent}>
-            <div className={styles.eventsHero}>
-              <h2>Upcoming Events</h2>
-              {sliderLoaded && (
-                <Slider {...settings} className={styles.customSlider}>
-                  <EventSlide text="Forever 80s Live" subtext="Saturday, July 13th @ 3PM" imageSrc="/images/ps_event_7_13.jpeg" link="https://www.eventbrite.com/e/80s-forever-w-asia-when-in-rome-naked-eyes-many-more-free-event-tickets-936838668677?aff=odcleoeventsincollection" />
-                  <EventSlide text="MC Magic, Baby Bash, Lil Rob & Amanda Perez" subtext="Sunday, July 14th @ 3PM" imageSrc="/images/ps_event_7_14.jpeg" />
-                  <EventSlide text="Montel Jordan, Shai, Ruff Endz, + Blaque" subtext="Sunday, July 21 @ 3PM" imageSrc="/images/ps_event_7_21.jpeg" />
-                  <EventSlide text="Banda Limon, Banda MaGuey, y Mas!" subtext="Sunday, August 4th @ 3PM" imageSrc="/images/ps_event_8_4.jpeg" />
-                  <EventSlide text="Pop 2000 Tour" subtext="Sunday, August 11th @ 3PM" imageSrc="/images/ps_event_8_11.jpeg" />
-                </Slider>
-              )}
+          <>
+            <Hero 
+              className="main-hero" 
+              videoSrc="/images/Pershing_Square_Video.mov"
+              text=" "
+              subtext=" "
+            />
+            <div className={styles.homeContent}>
+              <div className={styles.eventsHero}>
+                <h2>Upcoming Events</h2>
+                {sliderLoaded && (
+                  <Slider {...settings} className={styles.customSlider}>
+                    <EventSlide text="Forever 80s Live" subtext="Saturday, July 13th @ 3PM" imageSrc="/images/ps_event_7_13.jpeg" link="https://www.eventbrite.com/e/80s-forever-w-asia-when-in-rome-naked-eyes-many-more-free-event-tickets-936838668677?aff=odcleoeventsincollection" />
+                    <EventSlide text="MC Magic, Baby Bash, Lil Rob & Amanda Perez" subtext="Sunday, July 14th @ 3PM" imageSrc="/images/ps_event_7_14.jpeg" />
+                    <EventSlide text="Montel Jordan, Shai, Ruff Endz, + Blaque" subtext="Sunday, July 21 @ 3PM" imageSrc="/images/ps_event_7_21.jpeg" />
+                    <EventSlide text="Banda Limon, Banda MaGuey, y Mas!" subtext="Sunday, August 4th @ 3PM" imageSrc="/images/ps_event_8_4.jpeg" />
+                    <EventSlide text="Pop 2000 Tour" subtext="Sunday, August 11th @ 3PM" imageSrc="/images/ps_event_8_11.jpeg" />
+                  </Slider>
+                )}
+              </div>
             </div>
-          </div>
+          </>
         );
       case 'events':
         return (
-          <div>
+          <div className={styles.pageContent}>
+            <h1>Events</h1>
             {/* Add content for events page */}
           </div>
         );
       case 'venue':
         return (
-          <div>
+          <div className={styles.pageContent}>
+            <h1>Venue</h1>
             {/* Add content for venue page */}
           </div>
         );
@@ -94,14 +104,6 @@ export default function Home() {
   return (
     <div className={styles.pageWrapper}>
       <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
-      <Hero 
-        className="main-hero" 
-        videoSrc="/images/Pershing_Square_Video.mov"
-        text=" "
-        subtext=" "
-      >
-        {/* You can add any additional content inside the Hero component here */}
-      </Hero>
       <main className={styles.Home}>
         {renderPage()}
       </main>
