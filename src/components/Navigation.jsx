@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../app/styles/Navigation.module.css';
 
@@ -86,9 +88,6 @@ export default function Navigation({ setCurrentPage, currentPage }) {
                 onClick={() => handleClick(page, index)}
                 className={`${currentPage === page ? styles.active : ''}`}
               >
-                {page === 'events' && '📅'}
-                {page === 'home' && '🏠'}
-                {page === 'venue' && '📍'}
                 {page.charAt(0).toUpperCase() + page.slice(1)}
               </button>
             </li>
