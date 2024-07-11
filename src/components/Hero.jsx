@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from '../app/styles/Hero.module.css';
 
-export default function Hero({ children, className, text, subtext, imageSrc, link, videoSrc }) {
+export default function Hero({ children, className, text, subtext, imageSrc, link, videoSrc, buttonText, buttonLink }) {
   const content = (
     <>
       {videoSrc && (
@@ -16,6 +16,11 @@ export default function Hero({ children, className, text, subtext, imageSrc, lin
       <div className={styles.contentOverlay}>
         {text && <h1 className={styles.heroText}>{text}</h1>}
         {subtext && <p className={styles.heroSubtext}>{subtext}</p>}
+        {buttonText && buttonLink && (
+          <a href={buttonLink} className={styles.button}>
+            {buttonText}
+          </a>
+        )}
         {children}
       </div>
     </>

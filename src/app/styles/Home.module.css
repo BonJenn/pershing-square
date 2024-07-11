@@ -2,62 +2,63 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
-  
-  .Home {
+}
+
+.Home {
     flex: 1;
-  }
-  
-  .homeContent {
+}
+
+.homeContent {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .pageContent {
+}
+
+.pageContent {
     max-width: 1200px;
-    margin: 80px auto 0; /* Add top margin to account for fixed header */
+    margin: 80px auto 0;
     padding: 20px;
-  }
-  
-  .eventsHero {
+}
+
+.eventsHero {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .eventSlide {
+}
+
+.eventSlide {
     padding: 10px;
-  }
-  
-  .eventImageWrapper {
+}
+
+.eventImageWrapper {
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-  }
-  
-  .eventImage {
+}
+
+.eventImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .customSlider {
+}
+
+.customSlider {
     margin: 0 -10px;
-  }
-  
-  .customSlider :global(.slick-slide) {
+}
+
+.customSlider :global(.slick-slide) {
     padding: 0 10px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .homeContent,
     .pageContent {
-      padding: 10px;
+        padding: 10px;
     }
-  }
+}
+

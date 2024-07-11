@@ -63,8 +63,10 @@ export default function Home() {
             <Hero 
               className="main-hero" 
               videoSrc="/images/Pershing_Square_Video.mov"
-              text=" "
-              subtext=" "
+              text="Summer Concert Series 2024"
+              subtext="The Hottest Concert Series is Back in DTLA"
+              buttonText="Schedule and Free Tickets"
+              buttonLink="https://www.eventbrite.com/cc/los-angeles-free-concert-series-2332709"
             />
             <div className={styles.homeContent}>
               <div className={styles.eventsHero}>
