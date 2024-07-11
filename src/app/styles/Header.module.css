@@ -10,18 +10,26 @@
     align-items: flex-start;
     padding: 20px 0;
     transition: transform 0.3s ease-in-out;
-}
-
-.header.hidden {
+  }
+  
+  .header.hidden {
     transform: translateY(-100%);
-}
-
-.logo {
+  }
+  
+  .logo {
     position: absolute;
     left: 20px;
     top: 20px;
-}
-
-.navWrapper {
+  }
+  
+  .navWrapper {
     margin-top: 40px;
-}
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .navWrapper {
+      margin-top: 0;
+    }
+  }
+  

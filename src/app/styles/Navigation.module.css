@@ -4,9 +4,9 @@
     border-radius: 30px;
     padding: 5px;
     display: inline-block;
-}
-
-.pillBackground {
+  }
+  
+  .pillBackground {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -15,9 +15,9 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
     z-index: 1;
-}
-
-.activePill {
+  }
+  
+  .activePill {
     position: absolute;
     height: calc(100% - 10px);
     top: 5px;
@@ -25,22 +25,22 @@
     border-radius: 25px;
     transition: all 0.3s ease;
     z-index: 2;
-}
-
-.navList {
+  }
+  
+  .navList {
     position: relative;
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
     z-index: 3;
-}
-
-.navList li {
+  }
+  
+  .navList li {
     margin: 0 5px;
-}
-
-.navList button {
+  }
+  
+  .navList button {
     background: none;
     border: none;
     color: white;
@@ -53,8 +53,88 @@
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.navList button.active {
+  }
+  
+  .navList button.active {
     color: black;
-}
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 11;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+  
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  .mobileNav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    z-index: 10;
+  }
+  
+  .mobileNav.open {
+    transform: translateX(0);
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    .navList {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .mobileNav {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobileNav {
+      transform: translateX(100%);
+    }
+  }
+  
