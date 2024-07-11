@@ -9,29 +9,33 @@
   }
   
   .homeContent {
-    max-width: 1200px;
+    max-width: 1400px; /* Increased width for the slider */
     margin: 0 auto;
     padding: 20px;
   }
   
   .pageContent {
-    max-width: 1200px;
+    max-width: 1400px; /* Increased width for the slider */
     margin: 80px auto 0;
     padding: 20px;
   }
   
   .eventsHero {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
   .eventSlide {
     padding: 20px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.8); /* Black translucent background */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 400px; /* Ensures all slides are the same height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .eventSlide:hover {
@@ -60,12 +64,19 @@
   .eventSlide h3 {
     margin-top: 15px;
     font-size: 24px;
-    color: #333;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
   
   .eventSlide p {
     font-size: 16px;
-    color: #666;
+    color: #ccc; /* Light grey text color */
+    text-align: center;
+    margin-top: 10px;
   }
   
   .customSlider {
@@ -80,6 +91,14 @@
     .homeContent,
     .pageContent {
       padding: 10px;
+    }
+  
+    .eventSlide h3 {
+      font-size: 20px;
+    }
+  
+    .eventSlide p {
+      font-size: 14px;
     }
   }
   
