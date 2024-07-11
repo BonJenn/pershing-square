@@ -1,62 +1,60 @@
 .navContainer {
     position: relative;
-    background-color: #222;
-    border-radius: 30px; /* Increased */
-    padding: 6px; /* Increased */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    padding: 5px;
     display: inline-block;
 }
 
 .pillBackground {
     position: absolute;
-    top: 6px; /* Increased */
-    left: 6px; /* Increased */
-    right: 6px; /* Increased */
-    bottom: 6px; /* Increased */
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 25px; /* Increased */
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
     z-index: 1;
 }
 
 .activePill {
     position: absolute;
-    height: calc(100% - 12px); /* Adjusted */
-    top: 6px; /* Increased */
+    height: calc(100% - 10px);
+    top: 5px;
     background-color: #FFA500;
-    border-radius: 25px; /* Increased */
+    border-radius: 25px;
     transition: all 0.3s ease;
     z-index: 2;
 }
 
 .navList {
+    position: relative;
     list-style: none;
     display: flex;
-    gap: 0;
-    position: relative;
-    z-index: 3;
     margin: 0;
     padding: 0;
+    z-index: 3;
 }
 
 .navList li {
-    display: inline-block;
+    margin: 0 5px;
 }
 
 .navList button {
     background: none;
     border: none;
-    cursor: pointer;
-    font-size: 18px; /* Increased */
-    font-weight: 600;
     color: white;
-    padding: 15px 25px; /* Increased */
-    position: relative;
-    z-index: 3;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 25px;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px; /* Increased */
+    gap: 10px;
 }
 
 .navList button.active {
-    color: #000;
+    color: black;
 }

@@ -12,14 +12,14 @@ export default function Header({ setCurrentPage, currentPage }) {
         <Image 
           src="/images/pershing_square_logo.png" 
           alt="Pershing Square Logo" 
-          width={100}
-          height={110}
+          width={100} 
+          height={110} 
+          layout="fixed"
         />
       </div>
       <div className={styles.navWrapper}>
         <Navigation setCurrentPage={setCurrentPage} currentPage={currentPage} />
       </div>
-      <div className={styles.placeholder}></div>
     </header>
   );
 }

@@ -20,17 +20,8 @@ export default function Navigation({ setCurrentPage, currentPage }) {
     setActiveIndex(index);
   };
 
-  const getIcon = (page) => {
-    switch(page) {
-      case 'events': return '📅';
-      case 'home': return '🏠';
-      case 'venue': return '📍';
-      default: return null;
-    }
-  };
-
   return (
-    <nav className={`${styles.navContainer} ${styles.navbar}`}>
+    <nav className={styles.navContainer}>
       <div className={styles.pillBackground}></div>
       <div ref={pillRef} className={styles.activePill}></div>
       <ul className={styles.navList}>
@@ -40,7 +31,9 @@ export default function Navigation({ setCurrentPage, currentPage }) {
               onClick={() => handleClick(page, index)}
               className={`${currentPage === page ? styles.active : ''}`}
             >
-              <span className={styles.iconSpacing}>{getIcon(page)}</span>
+              {page === 'events' && '📅'}
+              {page === 'home' && '🏠'}
+              {page === 'venue' && '📍'}
               {page.charAt(0).toUpperCase() + page.slice(1)}
             </button>
           </li>
