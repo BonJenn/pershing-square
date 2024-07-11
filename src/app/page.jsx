@@ -87,15 +87,15 @@ export default function Home() {
       case 'events':
         return (
           <div className={styles.pageContent}>
-            <h1>Events</h1>
-            {/* Add content for events page */}
+            <h1 className={styles.pageTitle}>Events</h1>
+            <p className={styles.pageSubtext}>This page is currently under construction. Please check back later.</p>
           </div>
         );
       case 'venue':
         return (
           <div className={styles.pageContent}>
-            <h1>Venue</h1>
-            {/* Add content for venue page */}
+            <h1 className={styles.pageTitle}>Venue</h1>
+            <p className={styles.pageSubtext}>This page is currently under construction. Please check back later.</p>
           </div>
         );
       default:

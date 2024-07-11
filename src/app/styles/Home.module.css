@@ -16,8 +16,15 @@
   
   .pageContent {
     max-width: 1400px; /* Increased width for the slider */
-    margin: 80px auto 0;
+    margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Ensure text is visible on dark background */
+    height: calc(100vh - 160px); /* Adjust height to center content vertically */
   }
   
   .eventsHero {
@@ -87,6 +94,17 @@
     padding: 0 10px;
   }
   
+  .pageTitle {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .pageSubtext {
+    font-size: 20px;
+    color: #bbb;
+  }
+  
   @media (max-width: 768px) {
     .homeContent,
     .pageContent {
@@ -99,6 +117,14 @@
   
     .eventSlide p {
       font-size: 14px;
+    }
+  
+    .pageTitle {
+      font-size: 28px;
+    }
+  
+    .pageSubtext {
+      font-size: 16px;
     }
   }
   
