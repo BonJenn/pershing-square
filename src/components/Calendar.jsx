@@ -41,6 +41,12 @@ const Calendar = ({ events }) => {
   const renderDays = () => {
     const days = [];
     const daysInCurrentMonth = daysInMonth(currentMonth, currentYear);
+    const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+
+    for (let i = 0; i < firstDayOfMonth; i++) {
+      days.push(<div key={`empty-${i}`} className={styles.date}></div>);
+    }
+
     for (let day = 1; day <= daysInCurrentMonth; day++) {
       const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const hasEvent = events.some(event => event.date === dateStr);

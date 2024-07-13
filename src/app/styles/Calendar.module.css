@@ -75,6 +75,7 @@
 .eventDetails {
   margin-top: -150px; /* Significantly reduced margin to move event details closer */
   text-align: center;
+  height: 500px;
   position: relative; /* Changed to relative to keep it within the flow */
 }
 
@@ -99,7 +100,7 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 10;/* Reduced margin to lower the button */
+  margin-top: 50px;/* Reduced margin to lower the button */
 } 
 
 .getTicketsButton:hover {
