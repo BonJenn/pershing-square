@@ -15,7 +15,7 @@ export default function Navigation({ setCurrentPage, currentPage }) {
       pillRef.current.style.left = `${activeButton.offsetLeft}px`;
       pillRef.current.style.width = `${activeButton.offsetWidth}px`;
     }
-  }, [activeIndex]);
+  }, [activeIndex, currentPage]); // Add currentPage to the dependency array
 
   const handleClick = (page, index) => {
     setCurrentPage(page);
