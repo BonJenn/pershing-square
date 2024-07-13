@@ -1,33 +1,73 @@
-.calendar {
+.calendarContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px; /* Added padding to ensure space for event details */
+}
+
+.calendar {
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px;
   margin-bottom: 20px;
+}
+
+.navButton {
+  background-color: #FFA500; /* Changed to orange */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navButton:hover {
+  background-color: #cc8400; /* Darker shade of orange */
+}
+
+.daysOfWeek {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dayOfWeek {
+  width: 14.28%;
+  text-align: center;
+  font-weight: bold;
+  color: #aaa; /* Lighter text color */
 }
 
 .days {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 600px;
 }
 
 .date {
-  width: 14.28%; /* 7 columns */
+  width: 14.28%;
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold; /* Make the day numbers bold */
+}
+
+.date:hover {
+  background-color: #e0e0e0;
 }
 
 .eventDate {
-  color: red;
+  color: orange;
 }
 
 .eventDetails {
@@ -37,19 +77,26 @@
 
 .eventImage {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px; /* Increased size */
   border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.eventDetails h3 {
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
 .getTicketsButton {
-  display: inline-block;
-  padding: 10px 20px;
   background-color: #f16a44;
   color: white;
-  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 40px; /* Increased margin to lower the button */
 }
 
 .getTicketsButton:hover {

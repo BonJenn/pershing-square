@@ -29,6 +29,15 @@ const Calendar = ({ events }) => {
     setSelectedEvent(event);
   };
 
+  const renderDaysOfWeek = () => {
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    return daysOfWeek.map(day => (
+      <div key={day} className={styles.dayOfWeek}>
+        {day}
+      </div>
+    ));
+  };
+
   const renderDays = () => {
     const days = [];
     const daysInCurrentMonth = daysInMonth(currentMonth, currentYear);
@@ -49,14 +58,19 @@ const Calendar = ({ events }) => {
   };
 
   return (
-    <div className={styles.calendar}>
-      <div className={styles.header}>
-        <button onClick={handlePrevMonth}>Prev</button>
-        <h2>{currentDate.toLocaleString('default', { month: 'long' })} {currentYear}</h2>
-        <button onClick={handleNextMonth}>Next</button>
-      </div>
-      <div className={styles.days}>
-        {renderDays()}
+    <div className={styles.calendarContainer}>
+      <div className={styles.calendar}>
+        <div className={styles.header}>
+          <button onClick={handlePrevMonth} className={styles.navButton}>Prev</button>
+          <h2>{currentDate.toLocaleString('default', { month: 'long' })} {currentYear}</h2>
+          <button onClick={handleNextMonth} className={styles.navButton}>Next</button>
+        </div>
+        <div className={styles.daysOfWeek}>
+          {renderDaysOfWeek()}
+        </div>
+        <div className={styles.days}>
+          {renderDays()}
+        </div>
       </div>
       {selectedEvent && (
         <div className={styles.eventDetails}>
