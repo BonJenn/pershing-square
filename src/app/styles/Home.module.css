@@ -21,10 +21,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align items at the top */
     text-align: center;
     color: white; /* Ensure text is visible on dark background */
-    height: calc(100vh - 160px); /* Adjust height to center content vertically */
+    min-height: calc(100vh - 160px); /* Adjust height to center content vertically */
+    padding-top: 250px; /* Further increased padding to move content below the header */
   }
   
   .eventsHero {

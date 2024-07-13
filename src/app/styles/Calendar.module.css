@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px; /* Added padding to ensure space for event details */
+  padding-bottom: 20px; /* Reduced padding to move event details closer */
 }
 
 .calendar {
@@ -10,6 +10,8 @@
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
+  min-height: 500px; /* Fixed height to prevent moving */
+  position: relative; /* Ensure the calendar stays in place */
 }
 
 .header {
@@ -71,15 +73,16 @@
 }
 
 .eventDetails {
-  margin-top: 20px;
+  margin-top: -150px; /* Significantly reduced margin to move event details closer */
   text-align: center;
+  position: relative; /* Changed to relative to keep it within the flow */
 }
 
 .eventImage {
   width: 100%;
   max-width: 500px; /* Increased size */
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduced margin to move image closer */
 }
 
 .eventDetails h3 {
@@ -96,8 +99,8 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 40px; /* Increased margin to lower the button */
-}
+  margin-top: 10;/* Reduced margin to lower the button */
+} 
 
 .getTicketsButton:hover {
   background-color: #b54500;
