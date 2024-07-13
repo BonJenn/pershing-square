@@ -129,3 +129,29 @@
     }
   }
   
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .tabs button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .tabs button:hover,
+  .tabs button:focus {
+    border-color: #fff;
+  }
+
+  .tabs button.activeTab {
+    border-color: #f16a44;
+  }

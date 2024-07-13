@@ -8,6 +8,7 @@ import Calendar from '../components/Calendar';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import EventsList from '../components/EventsList';
 import styles from './styles/Home.module.css';
 
 const eventsData = [
@@ -60,6 +61,7 @@ const EventSlide = ({ text, subtext, imageSrc, link }) => {
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [view, setView] = useState('list');
   const [sliderLoaded, setSliderLoaded] = useState(false);
 
   useEffect(() => {
@@ -101,7 +103,11 @@ export default function Home() {
         return (
           <div className={styles.pageContent}>
             <h1 className={styles.pageTitle}>Events</h1>
-            <Calendar events={eventsData} />
+            <div className={styles.tabs}>
+              <button onClick={() => setView('list')} className={view === 'list' ? styles.activeTab : ''}>List</button>
+              <button onClick={() => setView('calendar')} className={view === 'calendar' ? styles.activeTab : ''}>Calendar</button>
+            </div>
+            {view === 'list' ? <EventsList events={eventsData} /> : <Calendar events={eventsData} />}
           </div>
         );
       case 'venue':
@@ -126,4 +132,3 @@ export default function Home() {
     </div>
   );
 }
-
