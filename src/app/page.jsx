@@ -14,9 +14,12 @@ import styles from './styles/Home.module.css';
 const eventsData = [
   { id: 3, date: '2024-07-20', text: 'Golden Oldies Concert', subtext: 'Saturday, July 20th @ 3PM', imageSrc: '/images/ps_event_7_20.jpeg', link: 'https://www.eventbrite.com/e/free-oldies-concert-w-the-stylistics-the-drifters-the-persuaders-more-tickets-945317980527?aff=erelpanelorg' },
   { id: 4, date: '2024-07-21', text: 'Montel Jordan, Shai, Ruff Endz, + Blaque', subtext: 'Sunday, July 21 @ 3PM', imageSrc: '/images/ps_event_7_21.jpeg', link: 'https://www.eventbrite.com/e/free-rnb-concert-with-montell-jordan-shai-ruff-endz-blaque-more-tickets-944593282937?aff=ebdssbdestsearch' },
-  { id: 5, date: '2024-08-04', text: 'Banda Limon, Banda MaGuey, y Mas!', subtext: 'Sunday, August 4th @ 3PM', imageSrc: '/images/ps_event_8_4.jpeg', link: 'https://www.eventbrite.com/e/free-banda-limon-banda-maguey-y-mas-gratis-tickets-942917440447?aff=ebdssbdestsearch' },
-  { id: 6, date: '2024-08-11', text: 'Pop 2000 Tour', subtext: 'Sunday, August 11th @ 3PM', imageSrc: '/images/ps_event_8_11.jpeg', link: 'https://www.eventbrite.com/e/free-concert-w-nsyncs-chris-kirkpatrick-o-town-the-calling-lfo-pop-tour-tickets-934920230577?aff=ebdssbdestsearch' },
-  { id: 7, date: '2024-08-24', text: 'Bachatavibez Fest', subtext: 'Saturday, August 24th @ 3PM', imageSrc: '/images/ps_event_8_24.jpeg', link: 'https://www.eventbrite.com/e/bachatavibez-fest-tickets-787881664267?aff=ebdssbdestsearch' }
+  { id: 5, date: '2024-07-27', text: 'Lupillo Rivera, Enigma Norteño, Omar Ruiz y Mas!', subtext: 'Saturday, July 27th @ 3PM', imageSrc: '/images/ps_event_7_27.jpeg', link: 'https://www.eventbrite.com/e/gratis-lupillo-rivera-enigma-norteno-omar-ruiz-y-mas-free-tickets-951123444827?aff=erelexpmlt' },
+  { id: 6, date: '2024-07-27', text: 'Plain White T\'s, 3OH!3, & Special Guest!', subtext: 'Saturday, July 28th @ 3PM', imageSrc: '/images/ps_event_7_28.jpeg', link: 'https://www.eventbrite.com/e/free-plain-white-ts-3oh3-special-guest-live-tickets-951061449397?aff=erelexpmlt' },
+  { id: 6, date: '2024-07-27', text: 'Queen, Led Zeppelin, Depeche Mode, & More!', subtext: 'Saturday, August 3rd @ 3PM', imageSrc: '/images/ps_event_8_3.jpeg', link: 'https://www.eventbrite.com/e/free-queen-led-zeppelin-depeche-mode-more-live-tributes-tickets-950073624787?aff=erelexpmlt' },
+  { id: 7, date: '2024-08-04', text: 'Banda Limon, Banda MaGuey, y Mas!', subtext: 'Sunday, August 4th @ 3PM', imageSrc: '/images/ps_event_8_4.jpeg', link: 'https://www.eventbrite.com/e/free-banda-limon-banda-maguey-y-mas-gratis-tickets-942917440447?aff=ebdssbdestsearch' },
+  { id: 8, date: '2024-08-11', text: 'Pop 2000 Tour', subtext: 'Sunday, August 11th @ 3PM', imageSrc: '/images/ps_event_8_11.jpeg', link: 'https://www.eventbrite.com/e/free-concert-w-nsyncs-chris-kirkpatrick-o-town-the-calling-lfo-pop-tour-tickets-934920230577?aff=ebdssbdestsearch' },
+  { id: 9, date: '2024-08-24', text: 'Bachatavibez Fest', subtext: 'Saturday, August 24th @ 3PM', imageSrc: '/images/ps_event_8_24.jpeg', link: 'https://www.eventbrite.com/e/bachatavibez-fest-tickets-787881664267?aff=ebdssbdestsearch' }
 ];
 
 const settings = {
